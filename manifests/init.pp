@@ -415,6 +415,7 @@ class docker(
   $package_name                      = $docker::params::package_name,
   $service_name                      = $docker::params::service_name,
   $docker_command                    = $docker::params::docker_command,
+  $daemon_command                    = $docker::params::daemon_command,
   $daemon_subcommand                 = $docker::params::daemon_subcommand,
   $docker_users                      = [],
   $docker_group                      = $docker::params::docker_group,

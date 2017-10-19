@@ -60,7 +60,8 @@ class docker::params {
   $service_name_default              = 'docker'
   $docker_command_default            = 'docker'
   $docker_group_default              = 'docker'
-  $daemon_subcommand                 = 'daemon'
+  $daemon_command                    = 'dockerd'
+  $daemon_subcommand                 = ''
   $storage_devs                      = undef
   $storage_vg                        = undef
   $storage_root_size                 = undef
