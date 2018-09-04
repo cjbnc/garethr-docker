@@ -67,6 +67,7 @@ define docker::registry(
     cwd         => '/root',
     path        => ['/bin', '/usr/bin'],
     timeout     => 0,
+    unless      => "grep -q \"${title}\" ~${local_user}/.docker/config.json",
   }
 
 }
