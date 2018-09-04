@@ -16,6 +16,7 @@
 
 DOCKER_STORAGE_OPTIONS="<% -%>
 <% if @storage_driver %> --storage-driver=<%= @storage_driver %><% end -%>
+<% if @storage_driver == 'overlay2' -%> --storage-opt overlay2.override_kernel_check=true<% end -%>
 <% if @storage_driver == 'devicemapper' -%>
 <% if @dm_basesize %> --storage-opt dm.basesize=<%= @dm_basesize %><% end -%>
 <% if @dm_fs %> --storage-opt dm.fs=<%= @dm_fs %><% end -%>
